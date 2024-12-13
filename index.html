@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shifumi</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <script defer src="./asset/js/script.js"></script>
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="start-screen" class="screen active">
+            <h1>Bienvenue dans Shifumi</h1>
+            <div id="input-container">
+                <input type="text" id="player-name" placeholder="Entrez votre pseudo">
+            </div>
+            <h2>Choisissez un avatar :</h2>
+            <div id="avatar-selection">
+                <img src="./asset/photos/image-removebg-preview.png" alt="Avatar 1" class="avatar" data-avatar="avatar1">
+                <img src="./asset/photos/image-removebg-preview (2).png" alt="Avatar 2" class="avatar" data-avatar="avatar2">
+                <img src="./asset/photos/image-removebg-preview (3).png" alt="Avatar 3" class="avatar" data-avatar="avatar3">
+            </div>
+            <button id="start-button">Commencer</button>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <h2 id="player-info"></h2>
+            <div id="scoreboard">
+                <span>Votre score : <span id="player-score">0</span></span>
+                <span>Score ordinateur : <span id="computer-score">0</span></span>
+                <span>Parties restantes : <span id="remaining-rounds">10</span></span>
+            </div>
+            
+            <div id="choices">
+                <button class="choice" data-choice="Sloop"><img src="./asset/photos/sloop.png" alt=""></button>
+                <button class="choice" data-choice="Brigantin"><img src="./asset/photos/brig.png" alt=""></button>
+                <button class="choice" data-choice="Galion"><img src="./asset/photos/gal.png" alt=""></button>
+            </div>
+            <h3 id="result">Faites votre choix !</h3>
+            <div id="round-info">
+                <p>Votre choix : <span id="player-choice">-</span></p>
+                <p>Choix de l'ordinateur : <span id="computer-choice">-</span></p>
+            </div>
+            <button id="rules-button">Règles</button>
+            </div>
+            <div id="rules-section" class="screen">
+                <h2>Règles du jeu Shifumi</h2>
+                <p><strong>Sloop</strong> bat <strong>Galion</strong></p>
+                <p><strong>Brigantin</strong> bat <strong>Sloop</strong></p>
+                <p><strong>Galion</strong> bat <strong>Brigantin</strong></p>
+                <button id="back-to-game">Retour</button>
+            </div>
+            
+        </div>
+
+        <div id="end-screen" class="screen">
+            <h1 id="final-result">Résultat</h1>
+            <button id="replay-button">Rejouer</button>
+        </div>
+
+        <div id="selected-avatar-container">
+            <img id="selected-avatar" src="" alt="Votre avatar">
+        </div>
+        
+    </div>
+
+</body>
+</html>
